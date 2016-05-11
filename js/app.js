@@ -16,7 +16,7 @@ var colors = random(mode);
     // Generate new colors
     colors = random(mode);
     //change background of h1
-    h1.style.background = ("#232323");
+    h1.style.background = "steelblue";
     //change message to nothing again
     messageDisplay.textContent = " " ;
     //reset button to New Game
