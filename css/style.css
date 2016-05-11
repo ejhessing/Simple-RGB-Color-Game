@@ -20,6 +20,8 @@ h1{
   color:white ;
 }
 
+
+
 /*ul {*/
 /*  list-style-type: none;*/
 
@@ -38,3 +40,13 @@ h1{
   
 /*}*/
 
+#stripe {
+  background: white;
+  height: 30px;
+  text-align: center;
+  color:black;
+}
+
+.selected {
+  background:blue;
+}
