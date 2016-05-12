@@ -152,3 +152,10 @@ function changeColor() {
 
   $('#display').css("background-color","rgb(" + r + "," + g + "," + b + ")" );
 }
+
+
+//Click How To Play Button
+$("#h2p").click(function(){
+  $("#howToPlay").toggle();
+
+});

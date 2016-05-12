@@ -79,6 +79,57 @@ button:hover {
 }
 
 /*********************
+    How to play
+**********************/
+
+#h2p {
+  border: none;
+  border-radius: 5px;
+  clear: both;
+  margin: 5px auto 10px;
+  padding: 10px;
+  width: 100%;
+  background: steelblue;
+  color:white;
+}
+
+
+.howToPlay {
+  background: #fff;
+}
+
+#howToPlay {
+  background: #fff;
+  border-radius: 5px;
+  clear: both;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  display: none;
+}
+
+#howToPlay p {
+  padding:10px;
+  margin: 5px 0;
+}
+
+#howToPlay:after{
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba( 255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 10px;
+  margin-left: -10px;
+
+}
+
+
+
+/*********************
           HINT
 **********************/
 
@@ -86,7 +137,7 @@ button:hover {
   border: none;
   border-radius: 5px;
   clear: both;
-  margin: 20px auto 0;
+  margin: 10px auto 0;
   padding: 10px;
   width: 100%;
   background: steelblue;
