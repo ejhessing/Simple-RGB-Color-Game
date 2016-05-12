@@ -58,6 +58,7 @@
             messageDisplay.style.color = "#266A2E";
             h1.style.background = pickedSquare;
             resetButton.textContent = "Play Again?";
+
         } else {
           this.style.background = "#232323";
           messageDisplay.textContent = "Try Again";
