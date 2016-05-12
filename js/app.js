@@ -1,5 +1,5 @@
   var colors = [];
-  var mode = 6;
+  var mode = 9;
   var pickedColor ;
   var h1 = document.querySelector("h1");
   var resetButton = document.querySelector("#reset");
@@ -7,10 +7,12 @@
   var squares = document.querySelectorAll(".square");
   var colorDisplay = document.getElementById("colorDisplay");
   var messageDisplay = document.getElementById("message");
+  var container = document.getElementById("container");
 
   init();
 
   function init() {
+
     setUpModeButtons();
     setUpSquares();
     reset();
@@ -19,16 +21,26 @@
   function setUpModeButtons () {
     //Game Mode button Event Listeners
     for(var i = 0; i< gameModeButtons.length; i++){
+
       gameModeButtons[i].addEventListener("click", function(){
         //remove selected class from the different game modes
         gameModeButtons[0].classList.remove("selected"); 
-        gameModeButtons[1].classList.remove("selected"); 
+        gameModeButtons[1].classList.remove("selected");
+        gameModeButtons[2].classList.remove("selected");  
+        //Add selected class to the game mode chosen
         this.classList.add("selected");
-        this.textContent === "Easy" ? mode = 3: mode = 6;
+        if(this.textContent === "Easy"){
+          mode = 3;
+        } else if (this.textContent === "Medium"){
+          mode = 6;
+        } else {
+          mode = 9;
+        } 
         reset();
       });
     }
   }
+
 
   function setUpSquares () {
     for(var i =0 ; i < squares.length ; i++ ){
@@ -43,17 +55,20 @@
         if(pickedSquare === pickedColor){
             changeColors(pickedSquare);
             messageDisplay.textContent = "Well Done!";
+            messageDisplay.style.color = "#266A2E";
             h1.style.background = pickedSquare;
-            resetButton.textContent = "Play Again ?";
+            resetButton.textContent = "Play Again?";
         } else {
           this.style.background = "#232323";
           messageDisplay.textContent = "Try Again";
+          messageDisplay.style.color = "#ff0000";
         }
       });
     } 
   }
 
   function reset() {
+
     colors = random(mode);
     //change background of h1
     h1.style.background = "steelblue";
