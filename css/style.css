@@ -5,18 +5,19 @@ body{
 }
 
 .square {
-  width: 30%;
+  width: 60%;
   background:navy;
-  padding-bottom: 30%;
+  padding-bottom: 60%;
   float:left;
-  margin: 1.50%;
-  border-radius: 15%;
+  margin: 2.5% 20%;
+  border-radius: 5%;
   transition: background 0.5s;
   -webkit-transition: background 0.6s;
   -moz-transition: background 0.6s;
 }
 
 #container{
+  width: 80%;
   max-width: 600px;
   margin: 20px auto;
 }
@@ -34,19 +35,21 @@ h1{
 }
 
 #colorDisplay {
-  font-size:200%;
+  font-size:1.25em;
 }
 
 #message {
   display: inline-block;
-  width: 25%;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 button {
   border:none;
   background: none;
   text-transform: uppercase;
-  height: 100%;
+  width: 100%;
   font-weight: 700;
   color:steelblue;
   letter-spacing: 1px;
@@ -57,6 +60,7 @@ button {
   outline: none;
 }
 
+
 button:hover {
   color:white;
   background: steelblue;
@@ -64,7 +68,7 @@ button:hover {
 
 #stripe {
   background: white;
-  height: 30px;
+  height: 97px;
   text-align: center;
   color:black;
 }
@@ -73,3 +77,191 @@ button:hover {
   color:white;
   background: steelblue;
 }
+
+/*********************
+    How to play
+**********************/
+
+#h2p {
+  border: none;
+  border-radius: 5px;
+  clear: both;
+  margin: 5px auto 10px;
+  padding: 10px;
+  width: 100%;
+  background: steelblue;
+  color:white;
+}
+
+
+.howToPlay {
+  background: #fff;
+}
+
+#howToPlay {
+  background: #fff;
+  border-radius: 5px;
+  clear: both;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  display: none;
+}
+
+#howToPlay p {
+  padding:10px;
+  margin: 5px 0;
+}
+
+#howToPlay:after{
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba( 255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 10px;
+  margin-left: -10px;
+
+}
+
+
+
+/*********************
+          HINT
+**********************/
+
+#hint {
+  border: none;
+  border-radius: 5px;
+  clear: both;
+  margin: 10px auto 0;
+  padding: 10px;
+  width: 100%;
+  background: steelblue;
+  color:white;
+}
+
+/* New Color Palette */
+#colorSelect {
+  background: #fff;
+  border-radius: 5px;
+  clear: both;
+  margin: 20px auto 0;
+  padding: 10px;
+  width: 305px;
+  position: relative;
+  display: none;
+}
+
+#colorSelect:after{
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba( 255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 10px;
+  margin-left: -10px;
+
+}
+
+#display {
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+  box-shadow: none;
+  float: left;
+  border: none;
+  margin: 10px 20px 20px 10px;
+}
+
+.sliders p{
+  margin: 8px 0;
+  vertical-align: middle;
+}
+
+.sliders label{
+  display: inline-block;
+  margin: 0 10px 0 0 ;
+  width: 35px;
+  font-size: 14px;
+  color: #6d574e;
+}
+
+.slider input {
+  position:relative;
+  top: 2px;
+}
+
+
+/*********************
+    Media Queries
+**********************/
+ 
+@media (min-width: 540px) {
+
+
+ .square {
+    width: 44%;
+    margin: 3%;
+    padding-bottom: 44%;
+
+  }
+
+  #colorDisplay {
+    font-size:1.5em;
+  }
+  
+  #message {
+    display: inline-block;
+    width: 20%;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  button {
+    border:none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    width: auto;
+    font-weight: 700;
+    color:steelblue;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    outline: none;
+  }
+
+  #stripe {
+    background: white;
+    height: 20px;
+    text-align: center;
+    color:black;
+  }
+
+
+}
+
+@media (min-width: 800px) {
+
+ .square {
+    width: 30%;
+    margin: 1.5%;
+    padding-bottom: 30%;
+
+  }
+  #colorDisplay {
+    font-size:2em;
+  }
+}
+
+
+
